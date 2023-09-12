@@ -5,12 +5,27 @@ import { getCompanies } from '../redux/companies/companiesSlice';
 
 const Companies = () => {
   const [search, setSearch] = useState('');
-  const { companies } = useSelector((state) => state.companies);
+  const { companies, error, isLoading } = useSelector((state) => state.companies);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getCompanies());
   }, [dispatch]);
+
+  if (error) {
+    return (
+      <div className="message">
+        Error:
+        { error }
+      </div>
+    );
+  }
+
+  if (isLoading) {
+    return (
+      <div className="message">Looding ...</div>
+    );
+  }
 
   return (
     <>

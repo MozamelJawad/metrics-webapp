@@ -6,12 +6,27 @@ import Header from './Header';
 
 const CompanyDetails = () => {
   const { smbl } = useParams();
-  const { companyDetails } = useSelector((state) => state.companies);
+  const { companyDetails, isLoading, error } = useSelector((state) => state.companies);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getCompanyDetails(smbl));
   }, [dispatch, smbl]);
+
+  if (error) {
+    return (
+      <div className="message">
+        Error:
+        { error }
+      </div>
+    );
+  }
+
+  if (isLoading) {
+    return (
+      <div className="message">Looding ...</div>
+    );
+  }
 
   return (
     <>
