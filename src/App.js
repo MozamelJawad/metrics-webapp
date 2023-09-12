@@ -1,10 +1,18 @@
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
+import Companies from './components/Companies';
+import CompanyDetails from './components/CompanyDetails';
+import NoFound from './components/NoFound';
 
 function App() {
   return (
-    <div className="App">
-      <h1>React Project</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Companies />} />
+        <Route path="/details/:smbl" element={<CompanyDetails />} />
+        <Route path="*" element={<NoFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
