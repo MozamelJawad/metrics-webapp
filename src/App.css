@@ -1,5 +1,5 @@
 *,
-*::after, 
+*::after,
 *::before {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ body {
 }
 
 .card {
-  background: linear-gradient(to bottom right, #FF48B6, #FF7E6C);
+  background: linear-gradient(to bottom right, #ff48b6, #ff7e6c);
   padding: 1rem;
   height: 6rem;
   display: grid;
@@ -29,7 +29,7 @@ body {
 }
 
 .card:nth-child(odd) {
-  background: linear-gradient(to bottom right, #FF48B6, #FF7E6C);
+  background: linear-gradient(to bottom right, #ff48b6, #ff7e6c);
   opacity: 0.8;
 }
 
@@ -45,7 +45,7 @@ body {
 .header {
   height: 2rem;
   padding: 1.5rem 0;
-  background: linear-gradient(to bottom right, #FF48B6, #FF7E6C);
+  background: linear-gradient(to bottom right, #ff48b6, #ff7e6c);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,7 +75,7 @@ body {
 /* company details */
 
 .companyDetails {
-  background: linear-gradient(to bottom right, #FF48B6, #FF7E6C);
+  background: linear-gradient(to bottom right, #ff48b6, #ff7e6c);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -84,6 +84,7 @@ body {
 .image {
   display: grid;
   justify-content: center;
+
   /* grid-column: auto; */
   margin-top: 1rem;
 }
@@ -91,33 +92,30 @@ body {
 .infoTable {
   width: 80%;
   margin: 2rem 0;
-  background: linear-gradient(to bottom right, #fF6c87, #Fc7246);
+  background: linear-gradient(to bottom right, #ff6c87, #fc7246);
 }
 
 .tableInfo {
   border-collapse: collapse;
   width: 100%;
-
 }
 
-table, th, td {
+table,
+th,
+td {
   padding: 10px;
 }
 
 tr {
   background: linear-gradient(to bottom right, #b4a165, #c4a50d);
-   display: flex;
-   justify-content: space-between;
-   padding: 0 4%;
-   color: black;
-}
-
-td {
-  justify-content: first baseline;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4%;
+  color: black;
 }
 
 tr:nth-child(even) {
-  background: linear-gradient(to bottom right, #87cf8e, #B8cf87);
+  background: linear-gradient(to bottom right, #87cf8e, #b8cf87);
   color: black;
 }
 
