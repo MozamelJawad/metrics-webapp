@@ -1,7 +1,7 @@
 :root {
-  --background: #850530;
-  --background2: #b51145;
-  --background3: #980d39;
+  --background: #d3215c;;
+  --background2: #ec2165;
+  --background3: #b50e46;
   --white: #fff;
   --font-familly: 'Gill Sans', 'Gill Sans MT', calibri, 'Trebuchet MS', sans-serif;
 }
@@ -31,7 +31,7 @@ body {
   color: var(--white);
 }
 
-.link:nth-child(3n-2) {
+.link:nth-child(3n-1) {
   background-color: var(--background2);
   text-decoration: none;
   color: var(--white);
@@ -77,7 +77,7 @@ body {
 .header {
   height: 2rem;
   padding: 1.5rem 0;
-  background-color: #850530;
+  background-color: var(--background);
   display: flex;
   justify-content: space-between;
   align-items: center;
