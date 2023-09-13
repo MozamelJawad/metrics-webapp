@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header:  Should render the header correctly 1`] = `
+<div>
+  <div
+    class="header"
+  >
+    <a
+      data-testid="home"
+      href="/"
+    >
+      <i
+        class="bi bi-arrow-left-short"
+      />
+    </a>
+    <div
+      class="header-icon"
+    >
+      <i
+        class="bi bi-mic-fill"
+      />
+      <i
+        class="bi bi-gear-fill"
+      />
+    </div>
+  </div>
+</div>
+`;
