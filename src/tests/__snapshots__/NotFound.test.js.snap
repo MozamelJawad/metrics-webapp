@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Not Found Page:  Should render not found page correctly 1`] = `
+<div>
+  <div
+    style="color: red; text-align: center; margin-top: 1rem;"
+  >
+    <h3>
+      Page Not Found
+    </h3>
+    <p
+      style="margin-top: 1rem; color: blue;"
+    >
+      <a
+        href="/"
+      >
+        Got to Home page
+      </a>
+    </p>
+  </div>
+</div>
+`;
