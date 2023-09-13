@@ -3,7 +3,6 @@ import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import NotFound from '../components/NotFound';
 import '@testing-library/jest-dom';
 
-
 describe('Not Found Page: ', () => {
   it('Should render not found page correctly', () => {
     const { container } = render(
@@ -19,7 +18,7 @@ describe('Not Found Page: ', () => {
     render(
       <MemoryRouter>
         <NotFound />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
     const headingElement = screen.getByText('Page Not Found');
     expect(headingElement).toBeInTheDocument();
