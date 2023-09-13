@@ -38,7 +38,6 @@ const Companies = () => {
               <h3 className="symbol">{company.symbol}</h3>
               <p className="founded">{company.founded}</p>
             </span>
-
           </div>
         </Link>
       ))
