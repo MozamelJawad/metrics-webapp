@@ -10,12 +10,12 @@ const Companies = () => {
 
   useEffect(() => {
     dispatch(getCompanies());
-  }, [dispatch]);
+  }, [dispatch, error, isLoading]);
 
   if (!error) {
     return (
       <>
-        <div className="header">
+        <div data-testid="company-card" className="header">
           <p className="title">Companies</p>
           <input
             className="search"
