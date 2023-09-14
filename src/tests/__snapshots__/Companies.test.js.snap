@@ -111,35 +111,3 @@ exports[`Companies components:  Should render correctly 1`] = `
   </div>
 </div>
 `;
-
-exports[`Companies list:  Should render correctly 1`] = `
-<div>
-  <div
-    class="header"
-  >
-    <p
-      class="title"
-    >
-      Companies
-    </p>
-    <input
-      class="search"
-      placeholder="Search company by name"
-      type="text"
-    />
-    <div
-      class="header-icon"
-    >
-      <i
-        class="bi bi-mic-fill"
-      />
-      <i
-        class="bi bi-gear-fill"
-      />
-    </div>
-  </div>
-  <div
-    class="cards"
-  />
-</div>
-`;
