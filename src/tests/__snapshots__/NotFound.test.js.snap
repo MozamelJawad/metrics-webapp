@@ -3,13 +3,13 @@
 exports[`Not Found Page:  Should render not found page correctly 1`] = `
 <div>
   <div
-    style="color: red; text-align: center; margin-top: 1rem;"
+    class="notfound"
   >
     <h3>
       Page Not Found
     </h3>
     <p
-      style="margin-top: 1rem; color: blue;"
+      class="goTo"
     >
       <a
         href="/"

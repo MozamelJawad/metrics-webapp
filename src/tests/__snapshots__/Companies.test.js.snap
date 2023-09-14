@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Companies list:  Should render correctly 1`] = `
+exports[`Companies components:  Should render correctly 1`] = `
 <div>
   <div
     class="header"
@@ -28,6 +28,59 @@ exports[`Companies list:  Should render correctly 1`] = `
   </div>
   <div
     class="cards"
-  />
+  >
+    <a
+      class="link"
+      href="/details/AAPL"
+    >
+      <div
+        class="card"
+      >
+        <i
+          class="bi bi-arrow-right-circle"
+        />
+        <span
+          class="company-data"
+        >
+          <h3
+            class="symbol"
+          >
+            AAPL
+          </h3>
+          <p
+            class="founded"
+          >
+            1976
+          </p>
+        </span>
+      </div>
+    </a>
+    <a
+      class="link"
+      href="/details/GOOGL"
+    >
+      <div
+        class="card"
+      >
+        <i
+          class="bi bi-arrow-right-circle"
+        />
+        <span
+          class="company-data"
+        >
+          <h3
+            class="symbol"
+          >
+            GOOGL
+          </h3>
+          <p
+            class="founded"
+          >
+            1998
+          </p>
+        </span>
+      </div>
+    </a>
+  </div>
 </div>
 `;
