@@ -4,7 +4,6 @@ exports[`Companies components:  Should render correctly 1`] = `
 <div>
   <div
     class="header"
-    data-testid="company-card"
   >
     <p
       class="title"
@@ -78,32 +77,6 @@ exports[`Companies components:  Should render correctly 1`] = `
             class="founded"
           >
             1998
-          </p>
-        </span>
-      </div>
-    </a>
-    <a
-      class="link"
-      href="/details/MSFT"
-    >
-      <div
-        class="card"
-      >
-        <i
-          class="bi bi-arrow-right-circle"
-        />
-        <span
-          class="company-data"
-        >
-          <h3
-            class="symbol"
-          >
-            MSFT
-          </h3>
-          <p
-            class="founded"
-          >
-            1975
           </p>
         </span>
       </div>

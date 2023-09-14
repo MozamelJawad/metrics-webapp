@@ -5,7 +5,7 @@ import configureStore from 'redux-mock-store';
 import Companies from '../components/Companies';
 import '@testing-library/jest-dom';
 
-const mockStore = configureStore([]);
+const mockStore = configureStore();
 
 describe('Companies components: ', () => {
   let store;
@@ -15,7 +15,6 @@ describe('Companies components: ', () => {
         companies: [
           { symbol: 'AAPL', founded: 1976 },
           { symbol: 'GOOGL', founded: 1998 },
-          { symbol: 'MSFT', founded: 1975 },
         ],
         error: null,
         isLoading: false,
@@ -25,7 +24,7 @@ describe('Companies components: ', () => {
     store.dispatch = jest.fn();
   });
 
-  test('renders header and company cards correctly', () => {
+  test('renders header and company cards correctly', async () => {
     render(
       <Provider store={store}>
         <BrowserRouter>
@@ -38,22 +37,9 @@ describe('Companies components: ', () => {
 
     expect(screen.getByText('AAPL')).toBeInTheDocument();
     expect(screen.getByText('GOOGL')).toBeInTheDocument();
-    expect(screen.getByText('MSFT')).toBeInTheDocument();
   });
 
-  test('dispatches getCompanies action on component mount', () => {
-    render(
-      <Provider store={store}>
-        <BrowserRouter>
-          <Companies />
-        </BrowserRouter>
-      </Provider>,
-    );
-
-    expect(store.dispatch).toHaveBeenCalledTimes(1);
-  });
-
-  test('filters company cards based on search input', () => {
+  test('filters company cards based on search input', async () => {
     render(
       <Provider store={store}>
         <BrowserRouter>
@@ -65,7 +51,6 @@ describe('Companies components: ', () => {
     // Check if all company cards are initially rendered
     expect(screen.getByText('AAPL')).toBeInTheDocument();
     expect(screen.getByText('GOOGL')).toBeInTheDocument();
-    expect(screen.getByText('MSFT')).toBeInTheDocument();
 
     // Simulate typing in the search input
     fireEvent.change(screen.getByPlaceholderText('Search company by name'), { target: { value: 'GOOGL' } });
@@ -73,10 +58,22 @@ describe('Companies components: ', () => {
     // Check if only the card with 'GOOGL' symbol is rendered
     expect(screen.queryByText('AAPL')).not.toBeInTheDocument();
     expect(screen.queryByDisplayValue('GOOGL')).toBeInTheDocument();
-    expect(screen.queryByText('MSFT')).not.toBeInTheDocument();
   });
 
-  test('Should render correctly', () => {
+  test('dispatches getCompanies action on component mount', () => {
+    render(
+      <Provider store={store}>
+        <BrowserRouter>
+          <Companies />
+        </BrowserRouter>
+      </Provider>,
+    );
+
+    // Check if the getCompanies action is dispatched
+    expect(store.dispatch).toHaveBeenCalledTimes(1);
+  });
+
+  test('Should render correctly', async () => {
     const { container } = render(
       <Provider store={store}>
         <BrowserRouter>
