@@ -9,7 +9,7 @@ const initialState = {
 
 const url = 'https://financialmodelingprep.com/api/v3/nasdaq_constituent';
 
-const apikey = '9d6bdbbbe5a3f14eb44ee68783805850';
+const apikey = '2f162b623800cc8074a23cdf992a9690';
 
 export const getCompanies = createAsyncThunk('companies/getCompanies', async () => {
   const response = await fetch(`${url}?apikey=${apikey}`);

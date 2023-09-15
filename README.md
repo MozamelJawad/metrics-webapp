@@ -92,6 +92,7 @@ This project has two pages. The first page is the application's main page, which
 ### 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo](https://metric-webapp-1y1r.onrender.com)
+- [Live Demo in Netlify](https://6503f9f3a24bc45efd2082ff--inspiring-sherbet-e7eaca.netlify.app/)
 
 ### Key Features <a name="key-features"></a>
 
